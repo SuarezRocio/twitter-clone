@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Tweet } from './assets/components/Tweet'
-import {Bell, BookmarkSimple, DotsThreeCircle, Envelope, FileText, Hash, House, User} from "phosphor-react"
+import {Bell, BookmarkSimple, DotsThreeCircle, Envelope, FileText, Hash, House, Sparkle, User} from "phosphor-react"
 
 //Ferramenta de tipagem estatica para Javascript
 //Tipagem estatica: Mecanismo para evitar erros ENQUANTO a gente ta desenvolvendo a nosso app
@@ -45,7 +45,21 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         type='button'>Tweet</button>
       </aside>
       <div className="content">
-        content   
+        <main className='timeline'>
+         <div className='timeline-header'>
+          Home 
+          <Sparkle/>
+         </div>
+         <form className='new-tweet-form'>
+             <label htmlFor='tweet'>
+                <img src="https://avatars.githubusercontent.com/u/93008622?v=4" alt="Rocio Suarez"/>
+                <textarea id='tweet' placeholder="What's happening?"/>
+              </label> 
+              <button type='submit'>Tweet</button>
+         </form>
+
+        <div className="separator"/>
+        </main>   
        </div> 
     </div>
   </React.StrictMode>
