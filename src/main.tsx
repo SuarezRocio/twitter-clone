@@ -7,6 +7,19 @@ import { Sidebar } from './components/Sidebar'
 //Tipagem estatica: Mecanismo para evitar erros ENQUANTO a gente ta desenvolvendo a nosso app
 import "./global.css"
 import { Header } from './components/Header'
+import { Separator } from './components/Separator'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './routes'
+
+const tweets = [
+  "Meu primeiro tweet",
+  "Teste",
+  "Deu certo twetear"
+]
+
+// forEach / map
+//forEach => no tiene retorna
+//map => tiene retorno
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -16,6 +29,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <main className='timeline'>
          <Header title='Home'/>
          
+        <RouterProvider router={router}/>  
+
          <form className='new-tweet-form'>
              <label htmlFor='tweet'>
                 <img src="https://avatars.githubusercontent.com/u/93008622?v=4" alt="Rocio Suarez"/>
@@ -26,10 +41,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
         <div className="separator"/>
 
-        <Tweet/>
-        <Tweet/>
-        <Tweet/>
-        <Tweet/>
+        <Separator/>
+
+        {tweets.map(tweet => {
+        return <Tweet key={tweet} content={tweet}/>
+        })}
+
         </main>   
        </div> 
     </div>

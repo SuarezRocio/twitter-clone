@@ -1,7 +1,11 @@
 import { ArrowsClockwise, ChatCircle, Heart } from "phosphor-react"
 import "./Tweet.css"
 
-export const Tweet = () => {
+interface TweetProps{
+content: string
+}
+
+export const Tweet = (props: TweetProps) => {
   return (
     <div className="tweet">
       <a href="#" className="tweet">
@@ -12,14 +16,8 @@ export const Tweet = () => {
             <span>@rociosuarez</span>
           </div>  
           <p>
-          Acabei de migrar um projeto React GIGANTE de create-react-app para Vite e os resultados foram: 
-
-          ✅ npm start: De 32s para 400ms (sim, demorava 30s) 
-          ✅ npm build: De 120s para 22s
-
-          Além disso, troquei do Yarn para o PNPM e o install das deps mudou de 24s para 8s 🔥
+            {props.content}
           </p>
-
           <div className="tweet-content-footer">
             <button type="button">
               <ChatCircle/>
