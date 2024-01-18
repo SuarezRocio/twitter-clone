@@ -1,8 +1,9 @@
-import React, { FormEvent, useState } from 'react'
+import React, { FormEvent, KeyboardEvent, useState } from 'react'
 import { Header } from '../components/Header'
 import { Separator } from '../components/Separator'
 import { Tweet } from '../components/Tweet'
 import "./Status.css"
+import { PaperPlaneRight } from 'phosphor-react'
 
 /*const answers = [
   "Concordo...",
@@ -48,6 +49,14 @@ console.log("renderizo");
  * 2- El compara esa nueva version con la alteracion nueva del html con la version de mi estado anterior
  * 3- Aplicar las operaciones javascript para alterar solamente lo necesario del html
  */
+function handleKeySubmit (event: KeyboardEvent) {
+if( event.key === "Enter" && (event.ctrlKey || event.metaKey)){
+  //submit
+  setAnswers([ newAnswer,...answers])
+  setNewAnswer("")
+}
+}
+
   return (
     
     <main className='status'>
@@ -63,12 +72,16 @@ console.log("renderizo");
            <img src="https://avatars.githubusercontent.com/u/93008622?v=4" alt="Rocio Suarez"/>
            <textarea id='tweet' placeholder="Tweet your answer"
            value={newAnswer}
+           onKeyDown={handleKeySubmit}
            onChange={(event) => {
             setNewAnswer(event.target.value)
            }}
            />
          </label> 
-         <button type='submit'>Answer</button>
+         <button type='submit'>
+          <PaperPlaneRight/>
+          <span>Answer</span>
+          </button>
     </form>
 
    <div className="separator"/>

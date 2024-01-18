@@ -6,6 +6,7 @@ interface HeaderProps{
 }
 
 export const Header = (props:HeaderProps) => {
+  console.log("header")
   return (
     <div className='timeline-header'>
     {props.title}

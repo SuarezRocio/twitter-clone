@@ -36,6 +36,14 @@ setTweets([ newTweet,...tweets])
 setNewTweet("")
 }
 
+function handleKeySubmit (event: KeyboardEvent) {
+  if( event.key === "Enter" && (event.ctrlKey || event.metaKey)){
+    //submit
+  
+setTweets([ newTweet,...tweets])
+setNewTweet("")}
+  }
+
   return (
     <main className='timeline'>
     <Header title='Home'/>
