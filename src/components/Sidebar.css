@@ -17,10 +17,6 @@
   height: 2rem;
 }
 
-.content{
-border-left: 1px solid #ebecf0;
-border-right: 1px solid #ebeef0;
-}
 
 .sidebar .new-tweet{
   background: var(--twitter-blue);
