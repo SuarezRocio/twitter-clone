@@ -15,9 +15,9 @@ import { router } from './routes'
 //map => tiene retorno
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+  //<React.StrictMode>
        <RouterProvider router={router}/>  
-  </React.StrictMode>
+ // </React.StrictMode>
 )
 
 

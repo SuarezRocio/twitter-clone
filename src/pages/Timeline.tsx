@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react"
+import { FormEvent, KeyboardEvent, useState } from "react"
 import { Header } from "../components/Header"
 import { Separator } from "../components/Separator"
 import { Tweet } from "../components/Tweet"
@@ -53,6 +53,7 @@ setNewTweet("")}
            <img src="https://avatars.githubusercontent.com/u/93008622?v=4" alt="Rocio Suarez"/>
            <textarea id='tweet' placeholder="What's happening?"
            value={newTweet}
+           onKeyDown={handleKeySubmit}
            onChange={(event) => {
             console.log(event.target.value)
             setNewTweet(event.target.value)

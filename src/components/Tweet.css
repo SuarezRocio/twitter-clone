@@ -49,5 +49,14 @@
   background: transparent;
   border: 0;
   font-size: 0.875rem;
+  color: #89a2b8;
 }
 
+.tweet .tweet-content .tweet-content-footer button:hover {
+  color: var(--twitter-blue);
+}
+
+.tweet .tweet-content .tweet-content-footer button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
