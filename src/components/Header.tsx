@@ -1,16 +1,16 @@
-import { Sparkle } from 'phosphor-react';
-import './Header.css';
+import { Sparkle } from "phosphor-react";
 
-interface HeaderProps{
+import './Header.css'
+
+interface HeaderProps {
   title: string
 }
 
-export const Header = (props:HeaderProps) => {
-  console.log("header")
+export function Header(props: HeaderProps) {
   return (
-    <div className='timeline-header'>
-    {props.title}
-    <Sparkle/>
-   </div>
+    <div className="timeline-header">
+      {props.title}
+      <Sparkle />
+    </div>
   )
 }

@@ -1,8 +1,7 @@
-import React from 'react'
-import "./Separator.css"
+import './Separator.css'
 
-export const Separator = () => {
+export function Separator() {
   return (
-    <div className="separator"/>
+    <div className="separator" />
   )
 }

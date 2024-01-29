@@ -1,17 +1,16 @@
-import { Sidebar } from "../components/Sidebar"
-import React from 'react'
-import { Outlet, RouterProvider } from 'react-router-dom'
-import { router } from '../routes'
-//<RouterProvider router={router}/>  
-import "./Default.css"
+import { Outlet } from "react-router-dom";
+import { Sidebar } from "../components/Sidebar";
 
-export const Default = () => {
+import './Default.css'
+
+export function Default() {
   return (
-    <div className='layout'>
-      <Sidebar/>
+    <div className="layout">
+      <Sidebar />
+
       <div className="content">
-      <Outlet/>
-       </div> 
+        <Outlet />
+      </div>
     </div>
   )
 }
